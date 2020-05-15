@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/genlib.h
+stdio.h
+-
+stdlib.h
+-
+stddef.h
+-
+
+C:/Users/Apple/Desktop/Tetris2-master/Tetris2-master/tetris.c
+stdio.h
+-
+stdlib.h
+-
+stddef.h
+-
+genlib.h
+C:/Users/Apple/Desktop/Tetris2-master/Tetris2-master/genlib.h
+conio.h
+C:/Users/Apple/Desktop/Tetris2-master/Tetris2-master/conio.h
+windows.h
+-
+olectl.h
+-
+stdio.h
+-
+mmsystem.h
+-
+wingdi.h
+-
+ole2.h
+-
+ocidl.h
+-
+winuser.h
+-
+math.h
+-
+

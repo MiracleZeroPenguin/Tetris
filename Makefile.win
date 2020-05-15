@@ -1,0 +1,79 @@
+# Project: graphics
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o tetris.o Utils/block.o Utils/draw.o Utils/game.o Utils/judge.o Utils/music.o Utils/account.o Utils/event.o Utils/menu.o Utils/rank.o Utils/imgui.o Utils/log.o
+LINKOBJ  = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o tetris.o Utils/block.o Utils/draw.o Utils/game.o Utils/judge.o Utils/music.o Utils/account.o Utils/event.o Utils/menu.o Utils/rank.o Utils/imgui.o Utils/log.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lwinmm -mwindows lib/WinMM.Lib -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"./include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"./include"
+BIN      = graphics.exe
+CXXFLAGS = $(CXXINCS) -Wfatal-errors -g3 -g3
+CFLAGS   = $(INCS) -Wfatal-errors -g3 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+libgraphics/exceptio.o: libgraphics/exceptio.c
+	$(CC) -c libgraphics/exceptio.c -o libgraphics/exceptio.o $(CFLAGS)
+
+libgraphics/genlib.o: libgraphics/genlib.c
+	$(CC) -c libgraphics/genlib.c -o libgraphics/genlib.o $(CFLAGS)
+
+libgraphics/graphics.o: libgraphics/graphics.c
+	$(CC) -c libgraphics/graphics.c -o libgraphics/graphics.o $(CFLAGS)
+
+libgraphics/random.o: libgraphics/random.c
+	$(CC) -c libgraphics/random.c -o libgraphics/random.o $(CFLAGS)
+
+libgraphics/simpio.o: libgraphics/simpio.c
+	$(CC) -c libgraphics/simpio.c -o libgraphics/simpio.o $(CFLAGS)
+
+libgraphics/strlib.o: libgraphics/strlib.c
+	$(CC) -c libgraphics/strlib.c -o libgraphics/strlib.o $(CFLAGS)
+
+tetris.o: tetris.c
+	$(CC) -c tetris.c -o tetris.o $(CFLAGS)
+
+Utils/block.o: Utils/block.c
+	$(CC) -c Utils/block.c -o Utils/block.o $(CFLAGS)
+
+Utils/draw.o: Utils/draw.c
+	$(CC) -c Utils/draw.c -o Utils/draw.o $(CFLAGS)
+
+Utils/game.o: Utils/game.c
+	$(CC) -c Utils/game.c -o Utils/game.o $(CFLAGS)
+
+Utils/judge.o: Utils/judge.c
+	$(CC) -c Utils/judge.c -o Utils/judge.o $(CFLAGS)
+
+Utils/music.o: Utils/music.c
+	$(CC) -c Utils/music.c -o Utils/music.o $(CFLAGS)
+
+Utils/account.o: Utils/account.c
+	$(CC) -c Utils/account.c -o Utils/account.o $(CFLAGS)
+
+Utils/event.o: Utils/event.c
+	$(CC) -c Utils/event.c -o Utils/event.o $(CFLAGS)
+
+Utils/menu.o: Utils/menu.c
+	$(CC) -c Utils/menu.c -o Utils/menu.o $(CFLAGS)
+
+Utils/rank.o: Utils/rank.c
+	$(CC) -c Utils/rank.c -o Utils/rank.o $(CFLAGS)
+
+Utils/imgui.o: Utils/imgui.c
+	$(CC) -c Utils/imgui.c -o Utils/imgui.o $(CFLAGS)
+
+Utils/log.o: Utils/log.c
+	$(CC) -c Utils/log.c -o Utils/log.o $(CFLAGS)
